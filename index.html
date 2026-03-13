@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alana's Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Alana's Recipe Finder</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="resetSearch()">Home</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="search-section">
+            <h2>Find Recipes</h2>
+            <form id="ingredient-form">
+                <div class="form-group">
+                    <label for="ingredients-input">Enter Ingredients (comma-separated):</label>
+                    <input 
+                        type="text" 
+                        id="ingredients-input" 
+                        placeholder="e.g., chicken, tomato, garlic" 
+                        required
+                    >
+                    <button type="submit" class="btn-search">Search Recipes</button>
+                </div>
+            </form>
+            <div id="loading" class="loading" style="display: none;">Loading recipes...</div>
+        </section>
+
+        <section id="results-section" style="display: none;">
+            <h2>Recipe Results</h2>
+            <div id="recipes-container" class="recipes-grid"></div>
+        </section>
+
+        <section id="error-section" style="display: none;">
+            <h2>Error</h2>
+            <p id="error-message"></p>
+            <button class="btn-back" onclick="resetSearch()">Back to Search</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Alana's Recipe Finder. Find delicious recipes by ingredients.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
